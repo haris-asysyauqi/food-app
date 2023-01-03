@@ -1,5 +1,7 @@
 package com.haris.food_app;
 
+import static com.haris.food_app.variable.API_VARIABLE;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -31,7 +33,7 @@ public class History extends AppCompatActivity {
     private List<Stock> stockList;
     private RecyclerView.Adapter adapter;
     TextView allHistory,allproduk;
-    private String url = "http://"+  variable.API_VARIABLE + "/tugasakhir/tugasakhir/android/index.php?function=get_produk";
+    private String url = "http://"+API_VARIABLE + "/android/index.php?function=get_produk";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

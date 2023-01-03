@@ -1,5 +1,7 @@
 package com.haris.food_app;
 
+import static com.haris.food_app.variable.API_VARIABLE;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -34,7 +36,7 @@ public class home extends AppCompatActivity implements View.OnClickListener{
     private DividerItemDecoration dividerItemDecoration;
     private List<produk> produkList;
     private RecyclerView.Adapter adapter;
-    private String url = "http://"+ variable.API_VARIABLE + "/tugasakhir/tugasakhir/android/index.php?function=get_produk";
+    private String url = "http://"+API_VARIABLE + "/android/index.php?function=get_produk";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
