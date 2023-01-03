@@ -1,5 +1,7 @@
 package com.haris.food_app;
 
+import static com.haris.food_app.variable.API_VARIABLE;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -56,7 +58,7 @@ public class AddProduk extends AppCompatActivity {
         });
     }
     private void postDataUsingVolley(String nama, String deskripsi, int harga, int stock, String url_gambar) throws JSONException {
-        String URL = "http://" +  variable.API_VARIABLE + "/tugasakhir/tugasakhir/android/index.php?function=insert_produk";
+        String URL = "http://"+API_VARIABLE + "/android/index.php?function=insert_produk";
 
         JSONObject jsonBody = new JSONObject();
         jsonBody.put("nama", nama);

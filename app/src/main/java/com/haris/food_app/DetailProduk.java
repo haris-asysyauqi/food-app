@@ -1,5 +1,7 @@
 package com.haris.food_app;
 
+import static com.haris.food_app.variable.API_VARIABLE;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -127,7 +129,7 @@ public class DetailProduk extends AppCompatActivity {
     }
 
     private void getData(){
-        String url = "http://"+  variable.API_VARIABLE + "/tugasakhir/tugasakhir/android/index.php?function=get_produk_id&id=" + id;
+        String url = "http://"+API_VARIABLE + "/android/index.php?function=get_produk_id&id=" + id;
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading...");
         progressDialog.show();
@@ -170,7 +172,7 @@ public class DetailProduk extends AppCompatActivity {
     }
 
     private void postDataUsingVolley(String id ,String nama, String deskripsi, String harga, int stock, String url_gambar) throws JSONException {
-        String URL = "http://" +  variable.API_VARIABLE + "/tugasakhir/tugasakhir/android/index.php?function=update_produk&id=" + id;
+        String URL = "http://"+API_VARIABLE + "/android/index.php?function=update_produk&id=" + id;
 
         JSONObject jsonBody = new JSONObject();
         jsonBody.put("nama", nama);
@@ -212,7 +214,7 @@ public class DetailProduk extends AppCompatActivity {
     }
 
     private void deletData(String id ) throws JSONException {
-        String URL = "http://" +  variable.API_VARIABLE + "/tugasakhir/tugasakhir/android/index.php?function=delete_produk&id=" + id;
+        String URL = "http://"+API_VARIABLE + "/android/index.php?function=delete_produk&id=" + id;
 
         JSONObject jsonBody = new JSONObject();
 
